@@ -1,0 +1,18 @@
+# All pipeline parameters. Any key omitted here falls back to the default
+# in src/config.py, so this file only needs to list what you want to change.
+
+ingestion:
+  n_accounts: 500
+  n_transactions: 20000
+  seed: 42
+
+validation:
+  max_null_rate: 0.02
+  min_amount: 0.01
+  valid_risk_ratings: ["LOW", "MEDIUM", "HIGH"]
+
+compliance:
+  large_transaction_usd_threshold: 10000
+  high_risk_jurisdictions: ["KP", "IR", "SY", "MM", "AF"]
+  structuring_window_days: 1
+  structuring_txn_count_threshold: 3
