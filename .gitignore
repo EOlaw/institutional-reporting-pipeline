@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated data + warehouse are reproducible from a fresh `python main.py`
+# run and shouldn't be committed.
+data/raw/*.csv
+data/processed/*.db
+outputs/reports/*
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/reports/.gitkeep
+
+.venv/
+venv/
